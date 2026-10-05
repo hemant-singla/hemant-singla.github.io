@@ -1,0 +1,20 @@
+{
+  "source": "Walmart M5 / locally prepared daily_sales.csv.gz",
+  "scope": "200 selected product-store series across CA_1 and TX_1",
+  "aggregation": "Calendar month sum of units sold; complete 2012 calendar year",
+  "status": "Historical exploratory data; no forecasting models or results",
+  "values": [
+    10197,
+    12867,
+    14873,
+    14702,
+    15316,
+    17303,
+    17136,
+    17940,
+    17466,
+    15457,
+    13567,
+    15320
+  ]
+}
