@@ -94,4 +94,16 @@ if(journey){
   if(reduce){journey.style.setProperty('--progress','1');}
   else{upd();window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);}
 }
+/* Hero forecast replay: draws actuals, ticks the day counter */
+const chart=document.querySelector('.fc-chart');
+const dayEl=document.querySelector('.fc-day b');
+function replay(){
+  if(!chart||reduce||!doc.classList.contains('motion'))return;
+  chart.classList.remove('play');void chart.getBoundingClientRect();chart.classList.add('play');
+  const t0=performance.now()+300,dur=2800;
+  const tick=t=>{const p=Math.max(0,Math.min(1,(t-t0)/dur));if(dayEl)dayEl.textContent=Math.max(1,Math.round(1+27*p));if(p<1)requestAnimationFrame(tick);};
+  requestAnimationFrame(tick);
+}
+document.querySelector('.fc-replay')?.addEventListener('click',replay);
+if(chart&&'IntersectionObserver' in window){const fo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){replay();fo.disconnect();}})},{threshold:0.5});fo.observe(chart);}
 })();

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hemant Singla: electrical engineer and former Samsung R&amp;D and DXC engineer, XLRI MBA, now in supply chain analytics at Rutgers. Demand forecasting case study with code and Power BI dashboard."><meta property="og:title" content="Hemant Singla | Supply Chain Analytics"><meta property="og:description" content="Supply chain analytics portfolio: demand forecasting, inventory and supplier-risk case studies on public data."><meta property="og:type" content="website"><meta property="og:image" content="https://hemant-singla.github.io/assets/hemant-singla.jpg"><meta name="theme-color" content="#202f46"><title>Hemant Singla | Supply Chain Analytics</title><link rel="icon" href="assets/hemant-singla.jpg" type="image/jpeg"><link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})();</script>
-<link rel="stylesheet" href="assets/style.css?v=story-1"><script defer src="assets/main.js?v=story-1"></script></head>
+<link rel="stylesheet" href="assets/style.css?v=story-3"><script defer src="assets/main.js?v=story-3"></script></head>
 <body class="home"><a class="skip" href="#main">Skip to content</a><header class="header"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Hemant Singla home"><span>Hemant Singla<small>Supply chain analytics</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="nav-links" aria-label="Main navigation"><a href="#chain">Planning chain</a><a href="#work">Projects</a><a href="#about">Experience</a><a href="#how">How I work</a><a href="#contact">Contact</a><a class="resume-link" href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">Résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></nav></div></header>
 <main id="main">
 
@@ -14,6 +14,7 @@
     <p class="hero-sub">Electrical engineer from NIT Hamirpur, MBA from XLRI Jamshedpur, now at Rutgers Business School. I work across demand forecasting, inventory optimization, S&amp;OP and spend analysis, using Python, SQL, Excel (Solver), Power BI and Tableau, and I’m a Lean Six Sigma Green Belt. I like starting from raw data and ending with a clear recommendation.</p>
     <div class="profile-actions"><a class="button" href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="text-link" href="#work">See my work <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
   </div>
+  <div class="hero-side">
   <aside class="id-card" aria-label="About Hemant">
     <img src="assets/hemant-singla.jpg" width="240" height="240" alt="Hemant Singla" class="profile-photo">
     <div class="id-text">
@@ -23,6 +24,21 @@
       <p class="profile-location">New Brunswick, NJ · Expected graduation 2027</p>
     </div>
   </aside>
+  <figure class="forecast-card" aria-labelledby="fc-title">
+    <div class="fc-head"><span class="fc-live"><span class="fc-dot" aria-hidden="true"></span>Holdout replay</span><span class="fc-day" aria-hidden="true">Day <b>28</b> / 28</span></div>
+    <p id="fc-title" class="fc-title">Forecast vs actual · Walmart, final 28 days</p>
+    <svg class="fc-chart" viewBox="0 0 320 130" role="img" aria-label="Line chart of daily units sold across 200 Walmart product-store series from 25 April to 22 May 2016, with the LightGBM forecast made before that period. The forecast follows the weekly pattern closely and runs a little under the weekend peaks.">
+      <g class="fc-grid"><line x1="8" x2="312" y1="14.4" y2="14.4"/><line x1="8" x2="312" y1="58.8" y2="58.8"/><line x1="8" x2="312" y1="103.1" y2="103.1"/></g>
+      <g class="fc-axis"><text x="8" y="126">25 Apr 2016</text><text x="312" y="126" text-anchor="end">22 May</text></g>
+      <polyline class="fc-actual" pathLength="1" points="8.0,88.1 19.3,104.0 30.5,91.8 41.8,102.7 53.0,75.6 64.3,35.1 75.6,24.6 86.8,87.8 98.1,78.5 109.3,98.9 120.6,102.0 131.9,72.8 143.1,36.2 154.4,56.3 165.6,73.4 176.9,86.1 188.1,94.0 199.4,103.8 210.7,69.2 221.9,45.0 233.2,16.7 244.4,64.1 255.7,84.7 267.0,92.3 278.2,105.1 289.5,82.5 300.7,50.8 312.0,21.8"/>
+      <polyline class="fc-forecast" pathLength="1" points="8.0,92.3 19.3,97.5 30.5,102.2 41.8,100.6 53.0,89.2 64.3,60.8 75.6,42.6 86.8,81.6 98.1,86.1 109.3,95.1 120.6,91.5 131.9,75.5 143.1,40.9 154.4,54.2 165.6,78.8 176.9,90.5 188.1,95.0 199.4,93.4 210.7,81.4 221.9,53.5 233.2,41.5 244.4,88.5 255.7,94.4 267.0,98.9 278.2,97.5 289.5,85.9 300.7,53.9 312.0,44.8"/>
+    </svg>
+    <figcaption>
+      <div class="fc-legend"><span class="lg-a">Actual units / day</span><span class="lg-f">LightGBM forecast</span><button type="button" class="fc-replay">Replay ↺</button></div>
+      <p class="fc-note">Total of 200 product-store series. Forecast frozen before the period began. <a href="projects/walmart.html">See the study</a></p>
+    </figcaption>
+  </figure>
+  </div>
 </section>
 
 <!-- CAREER PATH -->
@@ -61,33 +77,33 @@
         <p class="panel-kicker">Walmart demand forecasting · independent public-data study</p>
         <h3>Which forecasts can a planner trust?</h3>
         <p>I compared seasonal-naive, ETS and LightGBM forecasts on 200 Walmart product-store series in a 60-origin weekly backtest, with the final four weeks hidden until every choice was locked. The best model was 21% more accurate than the standard week-over-week baseline, and its 90% forecast ranges caught 89% of actual sales.</p>
-        <p class="panel-tools"><strong>Tools</strong> Python · LightGBM · SQL (DuckDB) · Power BI</p>
+        <p class="panel-tools"><strong>Tools</strong></p><ul class="chips" aria-label="Tools"><li>Python</li><li>LightGBM</li><li>SQL (DuckDB)</li><li>Power BI</li></ul>
         <a class="text-link" href="projects/walmart.html">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
       </div>
       <div class="chain-panel" role="tabpanel" id="panel-inventory" aria-labelledby="tab-inventory" tabindex="0" hidden>
         <p class="panel-kicker">No finished project here yet</p>
         <h3>Next: Nike inventory efficiency &amp; working capital</h3>
         <p>How much cash is tied up in inventory, and what releasing it would cost in margin and service. Five years of public financials. This is my next project.</p>
-        <p class="panel-tools"><strong>Status</strong> Up next</p>
+        <p class="panel-tools"><strong>Status</strong></p><ul class="chips"><li class="chip-next">Up next</li></ul>
       </div>
       <div class="chain-panel" role="tabpanel" id="panel-supply" aria-labelledby="tab-supply" tabindex="0" hidden>
         <p class="panel-kicker">No finished project here yet</p>
         <h3>Next: Apple supplier concentration &amp; continuity risk</h3>
         <p>Mapping Apple’s disclosed supplier footprint to find geographic concentration risk.</p>
-        <p class="panel-tools"><strong>Status</strong> Planned</p>
+        <p class="panel-tools"><strong>Status</strong></p><ul class="chips"><li class="chip-next">Planned</li></ul>
       </div>
       <div class="chain-panel" role="tabpanel" id="panel-launch" aria-labelledby="tab-launch" tabindex="0" hidden>
         <p class="panel-kicker">Samsung R&amp;D Institute India · 2022–2024</p>
         <h3>10+ global TV launches, all on schedule</h3>
         <p>I owned USB feature readiness for 10+ global Samsung TV launches (Crystal UHD, Neo QLED). I coordinated release milestones with product, QA and design, and automated pre-release log analysis that flagged 10+ critical bugs before launch and cut triage time 50%.</p>
-        <p class="panel-tools"><strong>Tools</strong> Python · C · Jira · GitHub</p>
+        <p class="panel-tools"><strong>Tools</strong></p><ul class="chips" aria-label="Tools"><li>Python</li><li>C</li><li>Jira</li><li>GitHub</li></ul>
         <a class="text-link" href="#exp-samsung" data-jump="exp-samsung">Read the Samsung story <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
       </div>
       <div class="chain-panel" role="tabpanel" id="panel-decision" aria-labelledby="tab-decision" tabindex="0" hidden>
         <p class="panel-kicker">Walmart study · and before that, DXC</p>
         <h3>Turning the numbers into a call</h3>
         <p>In the Walmart study I tested which rule should pick the five items a planner reviews each week. A 5-item list caught 5× more forecast error than picking at random, and the decision memo recommends LightGBM with ETS as a fallback. At DXC, I used recurring-incident patterns to decide which legacy servers to retire first.</p>
-        <p class="panel-tools"><strong>Tools</strong> SQL · Power BI · ServiceNow</p>
+        <p class="panel-tools"><strong>Tools</strong></p><ul class="chips" aria-label="Tools"><li>SQL</li><li>Power BI</li><li>ServiceNow</li></ul>
         <a class="text-link" href="projects/walmart.html">See the recommendation <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
       </div>
     </div>
@@ -118,7 +134,7 @@
     <p class="pipe-detail" id="pipe-detail" aria-live="polite">Hover, tap or tab through a step to see what happens there.</p>
   </div>
 </div>
-<a class="project-shot" href="projects/walmart.html#dashboard"><img src="assets/dashboard/overview-thumb.jpg" width="1000" height="566" loading="lazy" alt="Overview page of the Walmart demand-planning Power BI dashboard"></a><div class="project-tools"><span>Python · LightGBM</span><span>SQL · DuckDB</span><span>Power BI</span><span>Time-series forecasting</span></div><div class="project-links"><a class="text-link" href="projects/walmart.html">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="text-link" href="https://github.com/hemant-singla/walmart-demand-planning" target="_blank" rel="noopener noreferrer">View code on GitHub <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></article>
+<a class="project-shot" href="projects/walmart.html#dashboard"><img src="assets/dashboard/overview-thumb.jpg" width="1000" height="566" loading="lazy" alt="Overview page of the Walmart demand-planning Power BI dashboard"></a><ul class="chips" aria-label="Tools"><li>Python</li><li>LightGBM</li><li>SQL</li><li>DuckDB</li><li>Power BI</li><li>Time-series forecasting</li></ul><div class="project-links"><a class="text-link" href="projects/walmart.html">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="text-link" href="https://github.com/hemant-singla/walmart-demand-planning" target="_blank" rel="noopener noreferrer">View code on GitHub <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></article>
 </div><div class="next-up" data-reveal><h3 class="next-title">In the pipeline</h3><ul class="next-list"><li><span class="next-co">Nike</span><span class="next-body"><strong>Inventory efficiency &amp; working capital</strong><span>How much cash is tied up in inventory, and what releasing it would cost in margin and service. Five years of public financials.</span></span><span class="next-status up">Up next</span></li><li><span class="next-co">Johnson &amp; Johnson</span><span class="next-body"><strong>Recall traceability &amp; lot-level controls</strong><span>A product-and-lot lookup from public Ethicon recall notices, with ambiguous matches flagged for review.</span></span><span class="next-status">Planned</span></li><li><span class="next-co">Apple</span><span class="next-body"><strong>Supplier concentration &amp; continuity risk</strong><span>Mapping Apple’s disclosed supplier footprint to find geographic concentration risk.</span></span><span class="next-status">Planned</span></li><li><span class="next-co">Amazon Logistics</span><span class="next-body"><strong>Last-mile route optimization</strong><span>Comparing routing approaches on historical delivery data under time-window constraints.</span></span><span class="next-status">Planned</span></li></ul></div></section>
 
 <!-- EXPERIENCE -->
@@ -131,7 +147,7 @@
 <div class="story-body" id="exp-samsung-body"><ol class="story-steps">
   <li><span class="step-label">Problem</span><p>Every TV launch had a fixed date, and USB features had to be ready on time across <strong>10+ hardware variants</strong>, each with its own board-specific code.</p></li>
   <li><span class="step-label">What I did</span><p>Merged board-specific code into shared, reusable modules. Automated pre-release log analysis to catch issues upstream. Coordinated release milestones with product, QA and design, and ranked fixes by customer impact.</p></li>
-  <li><span class="step-label">Tools</span><p>C · Python scripts for device logs · Jira · GitHub</p></li>
+  <li><span class="step-label">Tools</span><ul class="chips" aria-label="Tools"><li>C</li><li>Python scripts for device logs</li><li>Jira</li><li>GitHub</li></ul></li>
   <li><span class="step-label">Impact</span><p>Regressions down <strong>40%</strong>, each release about a week shorter, <strong>200+ engineer-hours</strong> saved. <strong>10+ critical bugs</strong> flagged before launch, triage time cut <strong>50%</strong>, post-launch defects down <strong>30%</strong>. Crystal UHD and Neo QLED launches, $100M+ annual revenue.</p></li>
 </ol></div>
 <p class="record-awards">Samsung R&amp;D Quarterly Award (among 500+ engineers) · 1st place, Samsung Ideathon 2024</p></article>
@@ -141,7 +157,7 @@
 <div class="story-body" id="exp-dxc-body"><ol class="story-steps">
   <li><span class="step-label">Problem</span><p>A Zurich-based bank’s Red Hat Linux fleet on VMware and Azure needed new servers deployed and legacy hardware retired, while business-critical systems stayed within service levels.</p></li>
   <li><span class="step-label">What I did</span><p>Ran the server lifecycle end to end. Used recurring-incident patterns to decide which legacy servers to retire first. Resolved <strong>100+ high-priority incidents</strong> and changes in ServiceNow. Point of contact for 10+ initiatives across 6 departments.</p></li>
-  <li><span class="step-label">Tools</span><p>Red Hat Linux · VMware · Azure · ServiceNow</p></li>
+  <li><span class="step-label">Tools</span><ul class="chips" aria-label="Tools"><li>Red Hat Linux</li><li>VMware</li><li>Azure</li><li>ServiceNow</li></ul></li>
   <li><span class="step-label">Impact</span><p><strong>50+ servers</strong> deployed, legacy hardware retired, incidents down <strong>25%</strong>. Trained <strong>50+ new engineers</strong> (2,000+ person-hours).</p></li>
 </ol></div>
 <p class="record-awards">FastTrack promotion · Star Employee 2021 · Top 10% of 100+ engineers</p></article>
@@ -151,7 +167,7 @@
 <div class="story-body" id="exp-tsf-body"><ol class="story-steps">
   <li><span class="step-label">Problem</span><p>Where should the Foundation’s CSR funds go, and how can it back women-run village businesses?</p></li>
   <li><span class="step-label">What I did</span><p>Benchmarked Tata Steel’s CSR spending against peer Indian steel producers from their annual reports. Reviewed NITI Aayog and other government schemes.</p></li>
-  <li><span class="step-label">Tools</span><p>Spend analysis · peer benchmarking from annual reports · government scheme review</p></li>
+  <li><span class="step-label">Tools</span><ul class="chips" aria-label="Tools"><li>Spend analysis</li><li>peer benchmarking from annual reports</li><li>government scheme review</li></ul></li>
   <li><span class="step-label">Impact</span><p>A recommendation on where to redirect funds, and a proposal for how the Foundation can back women-run village businesses.</p></li>
 </ol></div></article>
 </div>
@@ -177,13 +193,13 @@
 
 <!-- JOURNEY -->
 <section id="journey" class="journey-section section" aria-labelledby="journey-title"><div class="wrap">
-  <div class="section-heading" data-reveal><h2 id="journey-title">The journey so far</h2><p>Five places, one direction: from building systems toward the decisions behind them.</p></div>
+  <div class="section-heading" data-reveal><h2 id="journey-title">From Hamirpur to New Jersey</h2><p>Five places, one direction: first I built the systems, then I moved toward the decisions behind them.</p></div>
   <ol class="journey">
-    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2016 – 2020</p><h3>Hamirpur</h3><p class="j-what">NIT Hamirpur, B.Tech. in Electrical Engineering. Ran Hill’ffair 2019 as festival secretary.</p></li>
-    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2020 – 2022</p><h3>India</h3><p class="j-what">DXC Technology. Linux servers for a Zurich-based bank.</p></li>
-    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2022 – 2024</p><h3>Delhi</h3><p class="j-what">Samsung R&amp;D Institute India. USB software for 10+ global TV launches.</p></li>
-    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2025 – 2026</p><h3>Jamshedpur</h3><p class="j-what">XLRI MBA, plus a planning and analytics internship at Tata Steel Foundation.</p></li>
-    <li data-reveal class="j-now"><span class="j-dot" aria-hidden="true"></span><p class="j-when">Now · expected 2027</p><h3>New Jersey</h3><p class="j-what">Rutgers Business School, M.S. Supply Chain Analytics.</p></li>
+    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2016 – 2020</p><h3>Hamirpur</h3><p class="j-what">NIT Hamirpur, B.Tech. in Electrical Engineering. Ran Hill’ffair 2019 as festival secretary.</p><p class="j-why">What it gave me: an engineer’s habit of checking the data, and my first real deadline and budget: ₹20 lakh and 5,000+ people for Hill’ffair.</p></li>
+    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2020 – 2022</p><h3>India</h3><p class="j-what">DXC Technology. Linux servers for a Zurich-based bank.</p><p class="j-why">What it gave me: production discipline. A bank’s servers had to stay within service levels, so every change was planned, approved and tracked.</p></li>
+    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2022 – 2024</p><h3>Delhi</h3><p class="j-what">Samsung R&amp;D Institute India. USB software for 10+ global TV launches.</p><p class="j-why">Why I moved on: before every launch I was deciding which issues mattered most. I wanted to work on those decisions, not just the software.</p></li>
+    <li data-reveal><span class="j-dot" aria-hidden="true"></span><p class="j-when">2025 – 2026</p><h3>Jamshedpur</h3><p class="j-what">XLRI MBA, plus a planning and analytics internship at Tata Steel Foundation.</p><p class="j-why">What it added: finance, strategy and operations, and my first planning role.</p></li>
+    <li data-reveal class="j-now"><span class="j-dot" aria-hidden="true"></span><p class="j-when">Now · expected 2027</p><h3>New Jersey</h3><p class="j-what">Rutgers Business School, M.S. Supply Chain Analytics.</p><p class="j-why">Why supply chain: planners face the question I faced at Samsung every week: which few items deserve attention now? My Walmart study tests exactly that.</p></li>
   </ol>
 </div></section>
 
@@ -198,5 +214,5 @@
 </div><div class="certs-block" data-reveal><h3 class="certs-title">Certifications</h3><ul class="cert-list"><li><span class="cert-name">Lean Six Sigma Green Belt</span><span class="cert-issuer">Georgia Tech</span></li><li><span class="cert-name">RHCSA</span><span class="cert-issuer">Red Hat Certified System Administrator</span></li><li><span class="cert-name">AZ-900</span><span class="cert-issuer">Microsoft Azure Fundamentals</span></li><li><span class="cert-name">ML &amp; Data Science</span><span class="cert-issuer">Certificate</span></li><li><span class="cert-name">McKinsey Forward</span><span class="cert-issuer">McKinsey &amp; Company program</span></li></ul></div></section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section"><div class="wrap contact"><div><h2>Contact</h2><p>I’m looking for demand planning, supply chain analyst and S&amp;OP roles in the U.S., as an intern or full-time. I bring an engineer’s habit of checking the data and an MBA’s focus on the decision it supports.</p></div><div class="contact-links"><a class="contact-email" href="mailto:hs1532@scarletmail.rutgers.edu">hs1532@scarletmail.rutgers.edu <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="tel:+17325224424" aria-label="Call Hemant at +1 732 522 4424">+1 (732) 522-4424 <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/hemant-singla" target="_blank" rel="noopener noreferrer">GitHub · hemant-singla <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://www.linkedin.com/in/hemant-singla-3b4a85b9/" target="_blank" rel="noopener noreferrer">LinkedIn · Hemant Singla <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></section>
+<section id="contact" class="contact-section"><div class="wrap contact"><div><h2>Contact</h2><p class="contact-hook">Have a launch or a forecast that keeps slipping? <em>Let’s talk.</em></p><p>I’m looking for demand planning, supply chain analyst and S&amp;OP roles in the U.S., as an intern or full-time. I bring an engineer’s habit of checking the data and an MBA’s focus on the decision it supports.</p><a class="button contact-cta" href="mailto:hs1532@scarletmail.rutgers.edu">Email me <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div><div class="contact-links"><a class="contact-email" href="mailto:hs1532@scarletmail.rutgers.edu">hs1532@scarletmail.rutgers.edu <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="tel:+17325224424" aria-label="Call Hemant at +1 732 522 4424">+1 (732) 522-4424 <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/hemant-singla" target="_blank" rel="noopener noreferrer">GitHub · hemant-singla <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://www.linkedin.com/in/hemant-singla-3b4a85b9/" target="_blank" rel="noopener noreferrer">LinkedIn · Hemant Singla <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">View résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></section>
 </main><footer class="wrap footer"><span>© 2026 Hemant Singla</span><span>Engineering · Business · Supply chain</span><a href="#main">Back to top <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></footer></body></html>

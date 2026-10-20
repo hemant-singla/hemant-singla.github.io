@@ -171,3 +171,41 @@
 @media(prefers-reduced-motion:reduce){.motion [data-reveal]{opacity:1;transform:none}.id-card{transform:none}.availability-dot{animation:none}}
 @media print{.theme-toggle,.story-toggle{display:none}.story-body[hidden]{display:block!important}.chain-panel[hidden]{display:block!important}.chain-section{background:none;color:#000}}
 .story,.edu-card,#proj-walmart{scroll-margin-top:110px}@media(max-width:900px){.id-card{align-items:start}}
+
+/* Round 2: hero forecast card, tool chips, contact hook, journey reasons */
+.hero{grid-template-columns:minmax(0,1fr) 360px;align-items:center}
+.hero-side{display:grid;gap:14px}
+.hero-side .id-card{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;transform:none;padding:14px}
+.hero-side .id-card:hover{transform:none;border-color:var(--ink)}
+.hero-side .id-text{padding:0}.hero-side .id-name{font-size:22px}.hero-side .id-card .profile-role{font-size:12px;margin-top:6px}.hero-side .id-card .availability{margin-top:10px;font-size:11px}.hero-side .id-card .profile-location{font-size:10px;margin-top:4px}
+.forecast-card{margin:0;background:var(--surface);border:1px solid var(--line);padding:16px 16px 12px;box-shadow:var(--shadow);transform:rotate(-.8deg);transition:transform .35s,border-color .2s}
+.forecast-card:hover{transform:rotate(0);border-color:var(--ink)}
+.fc-head{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fc-live{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-weight:600}.fc-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:blink 1.4s infinite}@keyframes blink{50%{opacity:.25}}
+.fc-day{font-variant-numeric:tabular-nums}.fc-day b{color:var(--ink);font-weight:600}
+.fc-title{font:400 18px/1.25 var(--serif);color:var(--ink);margin:8px 0 6px}
+.fc-chart{width:100%;height:auto;overflow:visible}.fc-grid line{stroke:var(--line);stroke-width:1}.fc-axis text{fill:var(--muted);font:10px var(--sans)}
+.fc-actual,.fc-forecast{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.fc-actual{stroke:var(--ink);stroke-width:2.2}.fc-forecast{stroke:var(--accent);stroke-width:2;stroke-dasharray:.012 .008}
+.motion .fc-chart.play .fc-actual{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.8s cubic-bezier(.4,0,.2,1) .3s forwards}
+.motion .fc-chart.play .fc-forecast{opacity:0;animation:fadeIn .6s ease 0s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes fadeIn{to{opacity:1}}
+.fc-legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;font-size:11px;color:var(--muted);margin-top:4px}
+.fc-legend span{display:inline-flex;align-items:center;gap:6px}.fc-legend span:before{content:"";width:16px;height:0;border-top:2px solid var(--ink)}.fc-legend .lg-f:before{border-top:2px dashed var(--accent)}
+.fc-replay{margin-left:auto;background:none;border:0;color:var(--ink);font-size:11px;min-height:32px;padding:0 4px;text-decoration:underline;text-underline-offset:3px}.fc-replay:hover{color:var(--accent)}
+.fc-note{font-size:10.5px;line-height:1.5;margin-top:2px}.fc-note a{color:var(--ink)}
+.chips{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{font-size:11.5px;line-height:1;padding:7px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;transition:border-color .2s,color .2s}
+.chips li:hover{border-color:var(--accent);color:var(--accent)}
+.chain-panel .chips li{background:rgba(255,255,255,.08);border-color:rgba(200,210,225,.35);color:inherit}
+.chain-panel .chips li.chip-next{border-style:dashed}
+.panel-tools{margin-top:18px!important}
+.project-description>.chips{margin-top:16px}
+.contact-hook{font:400 30px/1.25 var(--serif)!important;color:var(--ink)!important;letter-spacing:-.02em;max-width:22ch!important}.contact-hook em{color:var(--accent)}
+.contact-cta{margin-top:24px}
+.j-why{font-size:13px;line-height:1.6;color:var(--ink);margin-top:8px;max-width:58ch;padding-left:12px;border-left:2px solid var(--rust-soft)}
+@media(max-width:1100px){.hero{grid-template-columns:minmax(0,1fr) 320px}}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-side{grid-template-columns:1fr 1fr;align-items:start}.hero-side .id-card{max-width:none}.forecast-card{transform:none}}
+@media(max-width:650px){.hero-side{grid-template-columns:1fr}.hero-side .id-card{grid-template-columns:80px 1fr}.contact-hook{font-size:25px!important}}
+@media(prefers-reduced-motion:reduce){.forecast-card{transform:none}.fc-dot{animation:none}}
+@media(min-width:901px){.journey-section>.wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:70px;align-items:start}.journey-section .section-heading{display:block;position:sticky;top:130px}.journey-section .section-heading>p{margin-top:16px;font-size:14px;max-width:38ch}}
