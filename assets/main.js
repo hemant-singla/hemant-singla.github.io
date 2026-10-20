@@ -81,11 +81,13 @@ tabs.forEach((t,i)=>{
 });
 
 /* Architecture diagram: hover, focus or tap a step */
-const detail=document.getElementById('pipe-detail');
-const steps=[...document.querySelectorAll('.pipe-step')];
-const show=s=>{steps.forEach(x=>x.classList.toggle('active',x===s));if(detail)detail.textContent=s.dataset.detail;};
-steps.forEach(s=>{['mouseenter','focus','click'].forEach(ev=>s.addEventListener(ev,()=>show(s)));});
-if(steps[0]&&detail)show(steps[0]);
+document.querySelectorAll('.pipeline').forEach(pl=>{
+  const detail=pl.querySelector('.pipe-detail');
+  const steps=[...pl.querySelectorAll('.pipe-step')];
+  const show=s=>{steps.forEach(x=>x.classList.toggle('active',x===s));if(detail)detail.textContent=s.dataset.detail;};
+  steps.forEach(s=>{['mouseenter','focus','click'].forEach(ev=>s.addEventListener(ev,()=>show(s)));});
+  if(steps[0]&&detail)show(steps[0]);
+});
 
 /* Journey progress line */
 const journey=document.querySelector('.journey');
