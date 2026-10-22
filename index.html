@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hemant Singla: electrical engineer and former Samsung R&amp;D and DXC engineer, XLRI MBA, now in supply chain analytics at Rutgers. Demand forecasting case study with code and Power BI dashboard."><meta property="og:title" content="Hemant Singla | Supply Chain Analytics"><meta property="og:description" content="Supply chain analytics portfolio: demand forecasting, inventory and supplier-risk case studies on public data."><meta property="og:type" content="website"><meta property="og:image" content="https://hemant-singla.github.io/assets/hemant-singla.jpg"><meta name="theme-color" content="#202f46"><title>Hemant Singla | Supply Chain Analytics</title><link rel="icon" href="assets/hemant-singla.jpg" type="image/jpeg"><link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})();</script>
-<link rel="stylesheet" href="assets/style.css?v=story-6"><script defer src="assets/main.js?v=story-6"></script></head>
+<link rel="stylesheet" href="assets/style.css?v=story-7"><script defer src="assets/main.js?v=story-6"></script></head>
 <body class="home"><a class="skip" href="#main">Skip to content</a><header class="header"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Hemant Singla home"><span>Hemant Singla<small>Supply chain analytics</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="nav-links" aria-label="Main navigation"><a href="#work">Projects</a><a href="#chain">Planning chain</a><a href="#about">Experience</a><a href="#how">How I work</a><a href="#contact">Contact</a><a class="resume-link" href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">Résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></nav></div></header>
 <main id="main">
 
@@ -34,7 +34,7 @@
     </svg>
     <figcaption>
       <div class="fc-legend"><span class="lg-a">Actual units / day</span><span class="lg-f">LightGBM forecast</span><button type="button" class="fc-replay">Replay ↺</button></div>
-      <p class="fc-note">Total of 200 product-store series. Forecast frozen before the period began. <a href="projects/walmart.html">See the study</a></p>
+      <p class="fc-note">Total of 200 product-store series, off by about 8% a day. Forecast frozen before the period began. <a href="projects/walmart.html">See the study</a></p>
     </figcaption>
   </figure>
   </div>
@@ -69,7 +69,7 @@
 <p class="pcard-kind"><strong>Walmart</strong> · Retail demand planning · <span>Public data · not Walmart work</span></p>
 <div class="pcard-title"><h3>Demand forecasting &amp; review priorities</h3><span class="status status-done">Completed</span></div>
 <p class="pcard-line">Which forecasts can a planner trust, and which five items deserve a review each week?</p>
-<ul class="pcard-stats"><li><strong>21%</strong><span>more accurate than the week-over-week baseline</span></li><li><strong>89%</strong><span>of actual sales inside the 90% forecast ranges</span></li><li><strong>5×</strong><span>more forecast error caught than random picks</span></li></ul>
+<ul class="pcard-stats"><li><strong>21%</strong><span>more accurate than the week-over-week baseline</span></li><li><strong>89%</strong><span>of actual sales inside the 90% forecast ranges</span></li><li><strong>5×</strong><span>more error caught than random; simple rules matched my tuned score</span></li></ul>
 <div class="pcard-actions"><button class="story-toggle" aria-expanded="true" aria-controls="walmart-story"><span class="toggle-label">Quick story</span><span class="toggle-icon" aria-hidden="true"></span></button><div class="project-links"><a class="text-link" href="projects/walmart.html">Read the case study <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="text-link" href="https://github.com/hemant-singla/walmart-demand-planning" target="_blank" rel="noopener noreferrer">View code on GitHub <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div>
 </div>
 <div class="story-body" id="walmart-story">
@@ -77,7 +77,7 @@
     <li><span class="step-label">Problem</span><p>A planner can’t review every forecast every week. Which forecasts are reliable, and which five products deserve their attention?</p></li>
     <li><span class="step-label">Approach</span><p>Compare seasonal-naive, ETS and LightGBM in a 60-origin weekly rolling backtest. Every forecast uses only data up to its forecast date, and the final 28 days stay sealed until all choices are frozen.</p></li>
     <li><span class="step-label">Build</span><p>A Python and SQL pipeline from raw sales to a weekly review list, checked in DuckDB and presented in a 10-page Power BI dashboard. Hover or tap the steps below.</p></li>
-    <li><span class="step-label">Result</span><p>21% lower error than the baseline, honest 90% ranges (89% coverage), and a 5-item review list that caught 5× more error than random. Recommendation: LightGBM, with ETS as the fallback.</p></li>
+    <li><span class="step-label">Result</span><p>21% lower error than the baseline, honest 90% ranges (89% coverage), and about 8% error on the daily total across all 200 items. Simple review rules matched my tuned score; all caught about 5× more error than random. Recommendation: LightGBM, with ETS as the fallback.</p></li>
   </ol>
   <div class="pipeline">
     <p class="pipeline-title">How the study is built</p>
@@ -199,7 +199,7 @@
       <div class="chain-panel" role="tabpanel" id="panel-decision" aria-labelledby="tab-decision" tabindex="0" hidden>
         <p class="panel-kicker">Walmart study · and before that, DXC</p>
         <h3>Turning the numbers into a call</h3>
-        <p>In the Walmart study I tested which rule should pick the five items a planner reviews each week. A 5-item list caught 5× more forecast error than picking at random, and the decision memo recommends LightGBM with ETS as a fallback. At DXC, I used recurring-incident patterns to decide which legacy servers to retire first.</p>
+        <p>In the Walmart study I tested which rule should pick the five items a planner reviews each week. Simple rules (largest recent error, top sellers) did as well as the score I tuned, and every sensible list caught about 5× more forecast error than random picks. The decision memo recommends LightGBM with ETS as a fallback. At DXC, I used recurring-incident patterns to decide which legacy servers to retire first.</p>
         <p class="panel-tools"><strong>Tools</strong></p><ul class="chips" aria-label="Tools"><li>SQL</li><li>Power BI</li><li>ServiceNow</li></ul>
         <a class="text-link" href="projects/walmart.html">See the recommendation <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
       </div>

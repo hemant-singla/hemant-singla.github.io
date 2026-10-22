@@ -260,3 +260,5 @@
  .next-body span{display:none}
 }
 .path-track a.hovered .path-num{border-color:var(--accent);background:var(--accent);color:var(--on-ink)}.path-track a.hovered .path-name{color:var(--accent)}
+.fva-actual,.fva-forecast{fill:none;stroke-linejoin:round;stroke-linecap:round}.fva-actual{stroke:var(--ink);stroke-width:2.4}.fva-forecast{stroke:var(--accent);stroke-width:2.2;stroke-dasharray:6 4}.fva-weekend rect{fill:var(--wash)}.fva-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11px;color:var(--muted);margin:8px 0 4px}.fva-legend span{display:inline-flex;align-items:center;gap:6px}.fva-legend span:before{content:"";width:16px;height:0;border-top:2px solid var(--ink)}.fva-legend .lg-f:before{border-top:2px dashed var(--accent)}.fva-legend .lg-w:before{height:10px;border:0;background:var(--wash)}
+.case-block p+p{margin-top:12px}
