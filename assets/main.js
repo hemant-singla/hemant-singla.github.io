@@ -108,4 +108,8 @@ function replay(){
 }
 document.querySelector('.fc-replay')?.addEventListener('click',replay);
 if(chart&&'IntersectionObserver' in window){const fo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){replay();fo.disconnect();}})},{threshold:0.5});fo.observe(chart);}
+/* Career path: show the why on hover / focus */
+const pd=document.querySelector('.path-detail');
+const pl=[...document.querySelectorAll('.path-track a[data-why]')];
+if(pd&&pl.length){const sw=a=>{pd.textContent=a.dataset.why;pl.forEach(x=>x.classList.toggle('hovered',x===a));};pl.forEach(a=>{a.addEventListener('mouseenter',()=>sw(a));a.addEventListener('focus',()=>sw(a));});sw(pl[pl.length-1]);}
 })();
