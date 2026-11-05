@@ -61,7 +61,7 @@ h1,h2,h3,p{margin:0}img,svg{display:block;max-width:100%}
 @keyframes flapA{0%{transform:scaleY(1)}50%{transform:scaleY(.2)}100%{transform:scaleY(1)}}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:34px}
 .hint{font:400 12px/1.4 var(--mono);color:var(--muted);margin-left:10px}
-.hero-foot{display:none;position:absolute;right:var(--pad);bottom:40px;display:flex;align-items:center;gap:12px;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+.hero-foot{display:none;position:absolute;right:var(--pad);bottom:40px;align-items:center;gap:12px;font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
 .hero-foot i{width:1px;height:60px;background:linear-gradient(var(--muted),transparent);animation:drip 2s infinite}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
