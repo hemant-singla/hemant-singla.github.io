@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hemant Singla: electrical engineer and former Samsung R&amp;D and DXC engineer, XLRI MBA, now in supply chain analytics at Rutgers. Demand forecasting case study with code and Power BI dashboard."><meta property="og:title" content="Hemant Singla | Supply Chain Analytics"><meta property="og:description" content="Supply chain analytics portfolio: demand forecasting, inventory and supplier-risk case studies on public data."><meta property="og:type" content="website"><meta property="og:image" content="https://hemant-singla.github.io/assets/hemant-singla.jpg"><meta name="theme-color" content="#202f46"><title>Hemant Singla | Supply Chain Analytics</title><link rel="icon" href="assets/hemant-singla.jpg" type="image/jpeg"><link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t)}catch(e){}})();</script>
-<link rel="stylesheet" href="assets/style.css?v=story-10"><script defer src="assets/main.js?v=story-6"></script></head>
+<link rel="stylesheet" href="assets/style.css?v=story-10"><script defer src="assets/main.js?v=story-6"></script><link rel="stylesheet" href="assets/dock.css?v=1"><script defer src="assets/dock.js?v=1"></script></head>
 <body class="home"><a class="skip" href="#main">Skip to content</a><header class="header"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Hemant Singla home"><span>Hemant Singla<small>Supply chain analytics</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" class="nav-links" aria-label="Main navigation"><a href="#work">Projects</a><a href="#chain">Planning chain</a><a href="#about">Experience</a><a href="#how">How I work</a><a href="#contact">Contact</a><a class="resume-link" href="assets/Hemant_Singla_Resume.pdf" target="_blank" rel="noopener">Résumé <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M5 19 19 5M5 5h14v14"/></svg></a></nav></div></header>
 <main id="main">
 
@@ -38,6 +38,25 @@
     </figcaption>
   </figure>
   </div>
+</section>
+
+<!-- THE DOCK: conveyor belt of parcels, one per piece of work -->
+<section class="dock" id="dock" aria-labelledby="dock-title">
+  <div class="dock-wash" aria-hidden="true"></div>
+  <div class="dock-lamp" aria-hidden="true"></div>
+  <div class="dock-word" aria-hidden="true">ON TIME</div>
+  <div class="wrap dock-kicker">
+    <div><p class="dock-eyebrow">The dock · what I’ve shipped</p><h2 id="dock-title">Each parcel is one piece of work, labelled with the number it shipped with.</h2></div>
+    <p class="dock-hint">Hover a parcel to stop the belt. Drag or scroll to run it. Click a parcel to open it.</p>
+  </div>
+  <div class="dock-stage" aria-hidden="true"><svg class="dock-back" preserveAspectRatio="none"></svg><div class="dock-3d"></div></div>
+  <div class="wrap dock-bar">
+    <p class="dock-cap" aria-live="polite"></p>
+    <div class="dock-scrub" aria-hidden="true"><i></i></div>
+    <span class="dock-count">Scanned <b>0000</b></span>
+    <div class="dock-btns"><button type="button" class="dock-prev" aria-label="Previous parcel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="dock-next" aria-label="Next parcel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
+  </div>
+  <ul class="dock-list" aria-label="Parcels on the belt"></ul>
 </section>
 
 <!-- CAREER PATH -->
